@@ -11,9 +11,7 @@ class BotsController < ApplicationController
   def bot_test
     if request.post?
       a = params["queryResult"]["queryText"]
-      puts a
-      puts a
-      #Bot.create(name: "#{a}")
+      Bot.create(name: a)
     end
   end
 
