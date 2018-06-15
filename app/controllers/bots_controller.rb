@@ -5,6 +5,7 @@ class BotsController < ApplicationController
   # GET /bots
   # GET /bots.json
   def index
+    byebug
     @bots = Bot.all
   end
 
