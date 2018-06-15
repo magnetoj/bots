@@ -8,12 +8,21 @@ class BotsController < ApplicationController
     @bots = Bot.all
   end
 
+
+  #EXAMPLE POOST DIALOGLOW
+
   def bot_test
     if request.post?
       a = params["queryResult"]["queryText"]
       Bot.create(name: a)
     end
   end
+
+  def bot_retrieve
+  end
+
+  #EXAMPLE GET 
+
 
   # GET /bots/1
   # GET /bots/1.json
