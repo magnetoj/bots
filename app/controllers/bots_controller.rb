@@ -4,13 +4,15 @@ class BotsController < ApplicationController
 
   # GET /bots
   # GET /bots.json
-  def index"
+  def index
+    @bots = Bot.all
+  end
+
+  def bot_test
     if request.post?
       a = params["queryResult"]["queryText"]
       Bot.create(name: "#{a}")
     end
-    
-    @bots = Bot.all
   end
 
   # GET /bots/1
