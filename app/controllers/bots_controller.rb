@@ -5,7 +5,10 @@ class BotsController < ApplicationController
   # GET /bots
   # GET /bots.json
   def index
-    byebug
+    if request.post?
+      a = params[:queryResult]
+      Bot.create(name: "#{a}")
+    end
     @bots = Bot.all
   end
 

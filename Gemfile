@@ -55,7 +55,6 @@ end
 
 group :production do
   gem 'pg'
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
